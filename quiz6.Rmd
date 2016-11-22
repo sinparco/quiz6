@@ -1,0 +1,32 @@
+---
+title: "Quiz 6"
+author: "Parco Sin"
+date: "November 22, 2016"
+output: word_document
+---
+
+```{r,echo=FALSE,message=FALSE, warning=FALSE}
+# Code goes in blocks like this
+
+# load libraries
+library(tidyverse)
+library(apaTables)
+library(cocor)
+library(predictionInterval)
+```
+
+
+
+I examined the extent to which exam grades (E) were predicted by anxiety (A) and preparation (P). As indicated in Table 1, when the predictors were examined individually, there was a strong positive relation between anxiety and exam grades, *r* = .69, 95% CI[.64, .73], such that as anxiety increased exam grades inccreased. In addition, there was a moderate to strong positive relation between preparation and exam grades, *r* = .49, 95% CI[.42, .56], such that as preparation increased so did exam grades.  
+
+I used moderated multiple regression to test the extent to which the relation between anxiety and exam grades depended on the amount of exam preparation. I assessed this moderation by examining the interaction between anxiety and preparation using centered predictors (consistent  with the recommendations of Cohen, Cohen, West, and Aiken (2003)), see Table 2. Together the predictors (anxiety, preparation, and their product) accounted for a substantial variance in exam grades, $R^2 = .62$, 95% CI[.57, .66], *p* < .01. Results for the product term in this analysis were positive. Specifically, the *p*-value for the anxiety by preparation product term was below .01, *t*(496) = 6.06, *p* < .001, which suggests the presence of an interaction. Additionally, an inspection of squared semi-partial correlation for the product term indicated the proportion of variance accounted for was very small, $sr^2=.03$ with a fairly tight confidence interval, 95% CI[.01, .05]. As this information suggested the possibility of an interaction, I explored the regression surface with simple-slope analyses.
+
+The regression surface is presented in Figure 1 and the simple-slope cross-sections are presented in Figure 2. When preparation was low (i.e., -1 SD), there was a weak to moderate positive relation between anxiety and exam grades, such that as anxiety increased exam grades decreased, $b = 11.02$, 95% CI[9,08, 12.96], t(496) = 11.62, *p* < .001, see Equation 1 below. In contrast, when preparation was high (i.e., +1 SD) there was a moderate to strong positive relation between anxiety and exam grades such that as anxiety increased exam grades inccreased, $b = 19.49$, 95% CI[17.50, 21.48], t(496) = 19.26, *p* < .001, see Equation 2 below.
+
+
+$\hat{E}= 19.49A + 55.90$  (1)
+
+$\hat{E}= 11.02A + 42.53$  (2)
+
+Thus, the relation between anxiety and exam grades appears to be moderated by the extent to which students prepared for the exam. If students prepared extensively for the exam, high anxiety levels positively impacted exam performance. However, if students did not prepare extensively for the exam, high anxiety levels only resulted in slightly increased exam performance.
+
